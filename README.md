@@ -58,6 +58,11 @@ python mge_simulation.py
 3. **Post-Anomaly Containment:** * The *Monolithic Baseline* triggers systemic contagion (73.96%), causing total operational collapse and a forced *ex-post* system freeze (Strategic Velocity drops to 0.00%).
    * The *Cellular Series LLC* (MGE Layer) intercepts the anomaly instantly ($C_t = 0$), executes Outward Interdiction/Inward Halting to protect sibling cells (Strategic Velocity remains at 100.00%), and writes tamper-evident logs to the `Forensic_registry/` directory.
 
+### Alternative: Zero-Installation Execution via GitHub Codespaces
+If you prefer not to configure a local Python environment, you can execute this simulation directly within your browser:
+1. Click the **"Code"** green button at the top right of this repository.
+2. Select the **"Codespaces"** tab and click **"Create codespace on main"**.
+3. Once the cloud environment terminal initializes, simply run: `python mge_simulation.py`
 ---
 
 ## 5. Expected Empirical Output
