@@ -1,0 +1,38 @@
+name: Model-Governance Engine Simulation Execution
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch: # Allows manual triggering from the GitHub Actions tab
+
+jobs:
+  run-simulation:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository source code
+      uses: actions/checkout@v4
+
+    - name: Set up Python environment (Python 3.12)
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.12'
+
+    - name: Install required mathematical and data science dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install numpy pandas tabulate
+
+    - name: Execute discrete-event simulation model
+      run: |
+        python mge_simulation.py
+
+    - name: Archive and upload automated NIST SP 800-86 forensic logs
+      if: always() # Ensures logs are uploaded even if a partial baseline failure is registered
+      uses: actions/upload-artifact@v4
+      with:
+        name: mge-forensic-evidence-trail
+        path: Forensic_registry/
+        retention-days: 30 # Retains the verification data for the duration of standard peer review cycles
