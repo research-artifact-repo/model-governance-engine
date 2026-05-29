@@ -125,9 +125,9 @@ class ModelGovernanceEngineSimulator:
                 "raw_reasoning_trace_log": raw_reasoning_trace
             },
             "mge_enforcement_sequence": [
-                "Route 1 (Outward Interdiction): Active communication channel severed. Transaction aborted.",
-                "Route 2 (Inward Halting): Cryptographic API keys revoked. Asset registry pool frozen.",
-                "Route 3 (Downward Logging): Telemetry committed to separate statutory record block."
+                "Route 1 (Action-Trace Interdiction): Outbound API calls blocked and external side-effects rolled back (Containment).",
+                "Route 2 (Reasoning-Trace Quarantine): Chain-of-Thought artifacts and execution telemetry immutably encapsulated (Forensics).",
+                "Route 3 (Operational Reconfiguration): Cryptographic credentials rotated and execution failed over to hardened nodes (Recovery)."
             ],
             "cryptographic_integrity_verification": {
                 "standard": "NIST SP 800-86 Digital Forensics Compliance Baseline",
