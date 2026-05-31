@@ -135,6 +135,7 @@ The output image is saved as:
 ```text
 mge_sensitivity_heatmap-600.png
 ```
+![Sensitivity heatmap](mge_sensitivity_heatmap-600.png)
 
 ### Alternative: Zero-Installation Execution via GitHub Codespaces
 
